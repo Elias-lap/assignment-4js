@@ -42,20 +42,28 @@ function clearinput()
 }
   
  var logInEmail=document.getElementById('logInEmail')
-var logInPassword=document.getElementById('logInPassword')
+ var logInPassword=document.getElementById('logInPassword')
  var ButtonLogIn = document.getElementById('ButtonLogIn')
 var href=document.getElementById('href')
+ var count = ''
 if (ButtonLogIn!= null){
   ButtonLogIn.addEventListener('click' , function(){
 
+     
     for ( var i = 0 ; i < datausers.length ; i++){
-      if (logInEmail.value.toLowerCase()==datausers[i].emailUser.toLowerCase() && logInPassword.value == datausers[i].passwordUser){
-        console.log('yes')
-       
+      count = i 
+      if (logInEmail.value === datausers[i].emailUser && logInPassword.value === datausers[i].passwordUser){
+        window.open('index3.html')
+        
+        
       }
-    }return true;
-  
-   
+      
+    }
+    
+    
   })
 
 }
+// var welcome =datausers[count].nameuser
+
+// document.getElementById('welcome').innerHTML= `welcom`
